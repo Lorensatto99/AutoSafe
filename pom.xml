@@ -8,7 +8,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
-		<finalName>AutoSafe</finalName>
+		<finalName>ROOT</finalName>
 	</build>
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
