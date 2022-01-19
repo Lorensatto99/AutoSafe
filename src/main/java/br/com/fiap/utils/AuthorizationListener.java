@@ -22,7 +22,7 @@ public class AuthorizationListener implements PhaseListener{
 		String page = context.getViewRoot().getViewId();
 		System.out.println(page);
 		
-		if (page.equals("/index.xhtml")) {return;} ;
+		if (page.equals("/index.xhtml")) {return;}
 		if (page.equals("/signIn.xhtml")) {return;}
 		if (page.equals("/login.xhtml")) {return;}
 		
