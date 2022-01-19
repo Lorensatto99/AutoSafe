@@ -13,7 +13,9 @@
     <properties>
      <!-- Propriedades JDBC -->
 	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://lorensattodb.ddns.net/disrupt21?user=redrum&password=88984586" />
+	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://lorensattoDB.ddns.net/autosafe" />
+	<property name="javax.persistence.jdbc.user" value="redrum" />
+	<property name="javax.persistence.jdbc.password" value="88984586" />
 			
     
       <property name="hibernate.hbm2ddl.auto" value="update"/>
