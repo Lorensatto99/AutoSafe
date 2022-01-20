@@ -38,6 +38,7 @@ Projeto acadêmico simples com o objetivo de criar um site de pesquisa por locad
   ![JBoss](img/img6.png)
 
 - Instale o Server Wildfly pelo Eclipse
+
   ![WildFly](img/img7.png)
 
 ### Execute adicionando o projeto dentro do WildFly e Acesse a porta de acesso (normalmente 8080) que o projeto irá executar.
