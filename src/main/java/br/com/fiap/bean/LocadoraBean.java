@@ -92,7 +92,6 @@ public class LocadoraBean implements Serializable{
 	}
 
 	public List<Locadora> ordemNota() throws EntityNotFoundException{			
-		System.out.println("eu rodei");
 		return locadoraDao.orderByRate();
 	}
 	

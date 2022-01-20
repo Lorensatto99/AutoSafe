@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="AutoSafe" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="autosafe-persistence-unit" transaction-type="RESOURCE_LOCAL">
     <description>Forge Persistence Unit</description>
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>br.com.fiap.model.Avaliacao</class>
@@ -12,10 +12,10 @@
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
      <!-- Propriedades JDBC -->
-	<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://lorensattoDB.ddns.net/autosafe" />
-	<property name="javax.persistence.jdbc.user" value="redrum" />
-	<property name="javax.persistence.jdbc.password" value="88984586" />
+	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+	<property name="toplink.jdbc.url" value="" />
+	<property name="toplink.jdbc.user" value="" />
+	<property name="toplink.jdbc.password" value="" />
 			
     
       <property name="hibernate.hbm2ddl.auto" value="update"/>

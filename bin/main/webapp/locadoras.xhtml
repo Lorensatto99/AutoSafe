@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="_template.xhtml">
+	<ui:define name="content">
+		<h:head>
+			<h:outputStylesheet name="locadoras.css" library="css" />
+		</h:head>
+
+		<div class="p-d-flex p-jc-center">
+			<h3>Quer Alugar um carro? Confira a lista abaixo</h3>
+		</div>
+
+		<div class="lista">
+			<h:form>
+				<p:dataScroller value="#{locadoraBean.ordemNota()}" var="locadora"
+					chunkSize="10">
+					<f:facet name="header">
+					</f:facet>
+					<div class="locadora">
+						<div class="titulo-locadora">
+							<div class="p-text-bold">#{locadora.nome}</div>
+						</div>
+						<div class="p-d-flex p-jc-between p-p-5">
+							<div class="p-d-flex p-flex-column">
+								<div>
+									<p:graphicImage class="img-locadora"
+										name="/img/#{locadora.nome}/#{locadoraBean.imagem}" />
+								</div>
+							</div>
+							<div class="locadora-descricao p-d-flex ">
+								<div class="p-mr-2 p-as-start">#{locadora.descricao}</div>
+							</div>
+							<div class="locadora-acao product-list-action p-d-flex p-flex-column">
+								<div  style="display: flex;">
+									<p:rating readonly="true" class="p-d-flex" value="#{locadora.notaLocadora}" />
+								</div>
+								<p:commandButton value="Confira" class="p-mt-auto"
+									action="#{locadoraBean.pageLocadora(locadora.idLocadora)}">
+								</p:commandButton>
+							</div>
+						</div>
+					</div>
+				</p:dataScroller>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<h:outputStylesheet name="style.css" library="css" />
+	<h:outputStylesheet name="primeflex-2.0.0/primeflex.min.css"
+		library="css" />
+	<link rel="shortcut icon" href="resources/img/fav_logo_size_invert.jpg"/>
+	<title><ui:insert name="title">AutoSafe</ui:insert></title>
+</h:head>
+
+<body>
+	<div id="header" class="p-shadow-4">
+		<ui:insert name="header">
+			<div class="p-d-flex p-jc-between" >
+				<div class="p-mr-2 p-d-md-inline-flex">
+					<p:link outcome="index.xhtml" class="p-mr-2 p-d-md-inline-flex">
+						<img src="resources/img/logo_size_invert.jpg" style="width: 50%;" class="p-mr-2 p-d-md-inline-flex" alt="" />
+					</p:link>
+				</div>
+				<div class="p-mr-2 p-as-center">
+					<p:link outcome="index.xhtml" value="Início" style="text-decoration:none;color:#E41B23;margin-left:70px; margin-right:15px; font-family: 'Poppins', sans-serif; font-size:20px;"
+						icon="pi pi-fw pi-home">
+						<f:param name="i" value="0" />
+					</p:link>
+					<p:link value="Locadoras" styleClass="teste" style="text-decoration:none;color:#E41B23; font-family: 'Poppins', sans-serif; font-size:20px;" outcome="locadoras.xhtml" 
+					icon="pi pi-fw pi-flag">
+						<f:param name="i" value="1" />
+					</p:link>
+				</div>
+				<div class="p-d-flex">
+					<h:panelGroup rendered="#{logBean.verifyLog() == 'false'}">
+					<div class="p-mr-2 p-as-center">
+						<p:button value="Login" class="p-mr-2" style="background-color:#E41B23;border-color:#E41B23;margin-right:20px;" outcome="login.xhtml"
+							icon="pi pi-fw pi-sign-in">
+						</p:button>
+						<p:button value="Cadastra" class="p-mr-2" style="background-color:#E41B23;border-color:#E41B23;"
+							outcome="signIn.xhtml" icon="pi pi-fw pi-users">
+						</p:button>
+					</div>
+					</h:panelGroup>
+					<h:panelGroup rendered="#{logBean.verifyLog() == 'true'}">
+						<div class="p-mr-2 p-as-center">
+							<p:commandButton action="#{logBean.logout()}" value="Sair da Sessão"  icon="pi pi-fw pi-sign-out" class="p-mr-2"  style="background-color:#E41B23;border-color:#E41B23;" />
+						</div>
+					</h:panelGroup>
+				</div>
+
+			</div>
+		</ui:insert>
+	</div>
+	<div id="content">
+		<ui:insert name="content">
+		</ui:insert>
+	</div>
+	<div id="footer">
+		<ui:insert name="footer">
+		</ui:insert>
+	</div>
+</body>
+</html>

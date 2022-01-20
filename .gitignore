@@ -1,7 +1,5 @@
 /target/
-/bin/
-/.idea/
-/.project/
-/.tern-project/
 /.settings/
-/.classpath/
+.project
+.classpath
+/bin/

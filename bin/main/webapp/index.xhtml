@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="_template.xhtml">
+	<ui:define name="content">
+	<h:head>
+		<h:outputStylesheet name="index.css" library="css" />
+	</h:head>
+	
+	<div class="p-d-flex p-jc-center">
+		<h3>Localize a melhor opção de locadora para você</h3>
+	</div>
+	
+	<div class="content-section p-d-flex p-jc-center p-flex-wrap">	
+		<ui:repeat var="locadora" value="#{locadoraBean.indexLocadora()}">
+				<!-- Card da locadora na tela inicial -->
+					<div class="p-shadow-10 card">
+					<p:card style="width: 15em" >
+						<f:facet name="header">
+							<img alt="user header"
+								src="resources/img/#{locadora.nome}/#{locadoraBean.imagem}" />
+						</f:facet>
+						<f:facet name="title">
+		        			#{locadora.nome}
+		    			</f:facet>
+						<p>#{locadora.descricao}</p>
+					</p:card>
+					</div>
+		</ui:repeat>
+		</div>
+	</ui:define>
+</ui:composition>
+
+</html>

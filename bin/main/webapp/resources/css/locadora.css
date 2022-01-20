@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+.lista{
+	margin-right:200px;
+	margin-left:200px;
+}
+
+.titulo-locadora{
+	padding:32px;
+	font-size:30px;
+}
+
+.container-card{
+	margin-left:150px;
+	margin-right:150px;
+	padding:10px;
+}
+
+.cliente-avalicao{
+	padding:0px 0px 0px 0px;
+	font-size:15px;
+}
+
+.descricao-locadora{
+	font-size:15px;
+}
+
+.img-locadora{
+	width:200px;
+}
+
+.gmap{
+	
+	margin:20px;	
+}
+
+.imagens{
+	flex:0.5;
+}
+
+.descricao{
+	flex:0.5;
+}
+.descricao-p1{
+	margin:20px;
+	flex:0.9
+}
+
+.descricao-p2{
+	flex:0.1
+}
