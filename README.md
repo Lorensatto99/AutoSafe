@@ -30,7 +30,7 @@ Projeto acadêmico simples com o objetivo de criar um site de pesquisa por locad
     ![Singleton](img/img5.png)
 
   - Procure pelo Percistence.xml que fica no diretório <code>/src/main/resources/META-INF/percistence.xml</code>
-  - troque os valores de accesso de acordo com as do seu banco de dados;
+  - troque os valores de acesso de acordo com as do seu banco de dados;
 
 - Instale o Eclipse
 - Instale o JBoss Tools
